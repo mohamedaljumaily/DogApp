@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="project.Pages.LoginPage"
+             Appearing="ContentPage_Appearing">
+
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient Rotation="150">
+            <xfg:GradientStep StepColor="White" StepPercentage=".3"/>
+            <xfg:GradientStep StepColor="NavajoWhite" StepPercentage="1"/>
+            <xfg:GradientStep StepColor="Navy" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+
+    <StackLayout
+        Padding="5,50,5,10">
+        <Label
+            Text="Enter Username"
+            FontSize="16"
+            FontAttributes="Bold"
+            />
+        <Entry
+            Placeholder="username"
+             x:Name="UserNameEntry" 
+            />
+        <Label
+            Text="Enter Password"
+            FontSize="16"
+            FontAttributes="Bold"
+            />
+        <Entry
+            Placeholder="Password"
+             x:Name="PwsEntry"
+            IsPassword="true"
+            />
+        <Grid VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                   Text="Register Now"
+                TextColor="Maroon"
+                BackgroundColor="LightSeaGreen"
+                FontAttributes="Bold"
+                FontSize="20"
+                Clicked="Button_Clicked_1"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                />
+
+            <Button
+                Text="Login Now"
+                TextColor="Maroon"
+                BackgroundColor="LightSeaGreen"
+                FontAttributes="Bold"
+                FontSize="20"
+                Clicked="Button_Clicked"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                />
+            <Button
+                Text="Continue as guest"
+                TextColor="Maroon"
+                BackgroundColor="LightSeaGreen"
+                FontAttributes="Bold"
+                FontSize="20"
+                Clicked="Button_Clicked_2"
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                />
+          
+        </Grid>
+    </StackLayout>
+</ContentPage>
